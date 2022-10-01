@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <h:outputStylesheet library="css" name="default.css"/>
+        <h:outputStylesheet library="css" name="cssLayout.css"/>
+        <h:outputStylesheet library="css" name="styles.css"/>
+        <title>#{faceletsBandMemberController.pageTitleName}</title>
+    </h:head>
+    <h:body>
+        <div id="top">
+            <h2>#{faceletsBandMemberController.pageTitleName}</h2>
+        </div>
+        <div>
+            <div id="left">
+                <h:form id="navForm">
+                    <h:commandLink action="#{faceletsBandMemberController.populateMetallicaBandMemberList()}">
+                        Metallica Band Members
+                    </h:commandLink>
+                    <br/>
+                    <br/>
+                    <h:commandLink action="#{faceletsBandMemberController.populateTheHaloEffectBandMemberList()}">
+                        The Halo Effect Band Members
+                    </h:commandLink>
+                </h:form>
+            </div>
+            <div id="content" class="left-content">
+                <ui:insert name="content">Content</ui:insert>
+            </div>
+        </div>
+        <div id="bottom" style="position: absolute; width: 100%; bottom: 20px;">
+            Created by Serj C.
+        </div>
+    </h:body>
+</html>

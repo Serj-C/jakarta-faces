@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Metal Bands</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="templates/custom-template.xhtml">
+            <ui:define name="top"/>
+            <ui:define name="left"/>
+            <ui:define name="content">
+                <h:form id="componentForm">
+                    <h1>#{faceletsBandMemberController.current.first} #{faceletsBandMemberController.current.last}</h1>
+                    <p>
+                        <h:graphicImage id="metallica"
+                                        library="images" name="#{faceletsBandMemberController.current.last}.jpg"/>
+                        <br/>
+                        #{faceletsBandMemberController.current.bio}
+                    </p>
+                </h:form>
+            </ui:define>
+            <ui:define name="bottom">
+                bottom
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
