@@ -1,6 +1,6 @@
 #top {
     position: relative;
-    background-color: #036fab;
+    background-color: #808080;
     color: white;
     padding: 5px;
     margin: 0px 0px 10px 0px;
@@ -9,7 +9,8 @@
 #bottom {
     position: fixed;
     bottom: 0px;
-    background-color: #c2dfef;
+    color: #FFFFFF;
+    background-color: #808080;
     padding: 5px;
     width: 98%;
     margin: 10px 0px 0px 0px;
@@ -17,7 +18,7 @@
 
 #left {
     float: left;
-    background-color: #ece3a5;
+    background-color: #D3D3D3;
     padding: 5px;
     width: 150px;
 }

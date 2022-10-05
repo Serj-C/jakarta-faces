@@ -49,6 +49,7 @@ public class BandMemberController implements Serializable {
     @PostConstruct
     public void init() {
         populateMetallicaBandMemberList();
+        current = getBandMemberList().get(0);
     }
 
     public String populateMetallicaBandMemberList() {

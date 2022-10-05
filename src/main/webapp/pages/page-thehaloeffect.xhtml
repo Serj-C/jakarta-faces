@@ -2,37 +2,37 @@
 <html xmlns:ui="jakarta.faces.facelets"
       xmlns:f="jakarta.faces.core"
       xmlns:h="jakarta.faces.html">
-<body>
-<ui:composition template="./templates/custom-template.xhtml">
-    <ui:define name="top"/>
-    <ui:define name="left"/>
-    <ui:define name="content">
-        <h:form id="componentForm">
-            <h1>The Halo Effect Band Member List</h1>
-            <p>
-                Below is the band member list. Click on the band member's last name for more information
-                regarding the member.
-            </p>
-            <h:graphicImage id="thehaloeffect" library="images" name="thehaloeffect.jpg"/>
-            <br/>
-            <h:dataTable id="bandMemberTable" border="1" value="#{faceletsBandMemberController.bandMemberList}"
-                         var="bandMember">
-                <f:facet name="header">
-                    The Halo Effect Band Members
-                </f:facet>
-                <h:column>
-                    <h:commandLink id="bandMemberName"
-                                   action="#{faceletsBandMemberController.displayBandMember(bandMember.last)}"
-                                   value="#{bandMember.first} #{bandMember.last}"/>
-                </h:column>
-            </h:dataTable>
-            <br/>
-            <br/>
-        </h:form>
-    </ui:define>
-    <ui:define name="bottom">
-        bottom
-    </ui:define>
-</ui:composition>
-</body>
+    <body>
+        <ui:composition template="./templates/custom-template.xhtml">
+            <ui:define name="top"/>
+            <ui:define name="left"/>
+            <ui:define name="content">
+                <h:form id="componentForm">
+                    <h1>The Halo Effect Band Member List</h1>
+                    <p>
+                        Below is the band member list. Click on the band member's last name for more information
+                        regarding the member.
+                    </p>
+                    <h:graphicImage id="thehaloeffect" library="images" name="thehaloeffect.jpg"/>
+                    <br/>
+                    <h:dataTable id="bandMemberTable" border="1" value="#{faceletsBandMemberController.bandMemberList}"
+                                 var="bandMember">
+                        <f:facet name="header">
+                            The Halo Effect Band Members
+                        </f:facet>
+                        <h:column>
+                            <h:commandLink id="bandMemberName"
+                                           action="#{faceletsBandMemberController.displayBandMember(bandMember.last)}"
+                                           value="#{bandMember.first} #{bandMember.last}"/>
+                        </h:column>
+                    </h:dataTable>
+                    <br/>
+                    <br/>
+                </h:form>
+            </ui:define>
+            <ui:define name="bottom">
+                bottom
+            </ui:define>
+        </ui:composition>
+    </body>
 </html>
